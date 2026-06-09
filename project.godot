@@ -1,0 +1,35 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Schützenmadln – Salve & Schnaps"
+config/description="Satirische Rollentausch-Persiflage auf das Tiroler Schützenwesen. 16+"
+config/version="0.1.0"
+run/main_scene="res://scenes/Disclaimer.tscn"
+config/features=PackedStringArray("4.2", "mobile")
+
+[autoload]
+
+GameState="*res://autoload/GameState.gd"
+Dialekt="*res://autoload/Dialekt.gd"
+AudioDirigent="*res://autoload/AudioDirigent.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+sensors/enable_gyroscope=true
+sensors/enable_accelerometer=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
