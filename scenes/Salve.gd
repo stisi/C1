@@ -6,7 +6,6 @@ extends Control
 
 const BEAT_SEC := 0.8
 const SALVEN_PRO_LEVEL := 3
-const MAX_LEVEL := 6
 
 var _schuetzinnen: Array[Figur] = []
 var _bubble: SpeechBubble
@@ -127,7 +126,7 @@ func _input(event: InputEvent) -> void:
 func _handle_tap(event: InputEvent) -> void:
 	if not _armed:
 		return
-	var pressed := (event is InputEventScreenTouch and event.pressed) \
+	var pressed: bool = (event is InputEventScreenTouch and event.pressed) \
 		or (event is InputEventMouseButton and event.pressed)
 	if pressed:
 		_armed = false

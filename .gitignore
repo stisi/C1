@@ -1,0 +1,11 @@
+# Godot
+.godot/
+*.translation
+export.cfg
+
+# Android-Keystores & Build-Artefakte (niemals einchecken!)
+*.keystore
+*.jks
+android/
+*.apk
+*.aab
