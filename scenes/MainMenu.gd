@@ -10,9 +10,8 @@ func _ready() -> void:
 	_figuren()
 
 	var vbox := VBoxContainer.new()
-	vbox.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	vbox.position = Vector2(60, 60)
-	vbox.custom_minimum_size = Vector2(600, 0)
+	vbox.size = Vector2(600, 0)
 	vbox.add_theme_constant_override("separation", 22)
 	add_child(vbox)
 

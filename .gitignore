@@ -3,7 +3,8 @@
 *.translation
 export.cfg
 
-# Android-Keystores & Build-Artefakte (niemals einchecken!)
+# Build-Artefakte (Web/Android) – nicht einchecken
+build/
 *.keystore
 *.jks
 android/
