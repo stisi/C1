@@ -38,7 +38,9 @@ und der Marketender schenkt aus. Endabrechnung auf der Ergebnistafel.
 - Tiroler Dialekt in Comic-Sprechblasen (*„Oanschenkn, net daneben, Bua!"*)
 - **Prozeduraler Blasmusik-Soundtrack** (Humbta-Humbta-Synthesizer), der mit
   steigendem Pegel immer schräger und verstimmter klingt
-- Comic-Grafik komplett prozedural gezeichnet – keine Asset-Abhängigkeiten
+- Handgezeichnete Vektor-Illustrationen (SVG in `art/`) für die Figuren und
+  das Bierzelt; Feder und Gewehr als eigene, animierbare Teil-Sprites.
+  Effekte (Schuss, Bierfüllung, Wackeln) prozedural
 - Highscores: **„Ehrenschützin"** und **„Marketender des Jahres"**
   (lokal gespeichert)
 - 6 Level mit steigendem Schwierigkeitsgrad
@@ -49,8 +51,9 @@ und der Marketender schenkt aus. Endabrechnung auf der Ergebnistafel.
 - **Plattform:** Android, Hochformat (720×1280, skaliert)
 - **Eingabe:** Touch + Gyroskop/Beschleunigungssensor
   (Desktop-Fallback: Maus; Kippen = Ziehen bei gehaltener Taste)
-- Kein einziges externes Asset: Grafik via `_draw()`, Musik via
-  `AudioStreamGenerator`
+- **Grafik:** SVG-Illustrationen in `art/` (von Godot als Texturen importiert),
+  Effekte über `_draw()`. **Musik** prozedural via `AudioStreamGenerator` –
+  keine Binär-Assets im Repo
 
 ## Projektstruktur
 ```
@@ -58,7 +61,8 @@ project.godot          – Engine-Konfiguration (Hochformat, Sensoren)
 autoload/GameState.gd  – Punkte, Level, Promille, Versus-Modus, Highscores
 autoload/Dialekt.gd    – Tiroler Sprüche-Pools
 autoload/AudioDirigent.gd – prozedurale Blasmusik + Schuss-/Plopp-Sounds
-ui/Figur.gd            – Comic-Figuren (Schützin / Marketender im Dirndl)
+art/*.svg              – Illustrationen: Schützin, Marketender, Bierzelt, Feder, Gewehr
+ui/Figur.gd            – setzt die Figuren aus SVG-Sprites zusammen (drehbare Feder/Gewehr)
 ui/SpeechBubble.gd     – Sprechblasen
 scenes/Disclaimer.*    – 16+-Hinweis
 scenes/MainMenu.*      – Hauptmenü

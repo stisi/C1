@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 300" width="44" height="300">
+  <!-- Vorderlader-Gewehr, senkrecht. Kolben unten (Basis), Lauf oben. -->
+  <defs>
+    <linearGradient id="schaft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a4a22"/>
+      <stop offset="0.5" stop-color="#9c6334"/>
+      <stop offset="1" stop-color="#6a3d1c"/>
+    </linearGradient>
+    <linearGradient id="lauf" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#33343a"/>
+      <stop offset="0.5" stop-color="#55565e"/>
+      <stop offset="1" stop-color="#26272c"/>
+    </linearGradient>
+  </defs>
+  <!-- Lauf -->
+  <rect x="16" y="6" width="12" height="190" rx="4" fill="url(#lauf)" stroke="#1c1d22" stroke-width="1.5"/>
+  <!-- Mündung + Korn -->
+  <rect x="14" y="2" width="16" height="8" rx="2" fill="#1c1d22"/>
+  <rect x="20" y="-2" width="4" height="8" fill="#1c1d22"/>
+  <!-- Ladestock-Halterung -->
+  <circle cx="22" cy="60" r="3" fill="#caa45a"/>
+  <circle cx="22" cy="120" r="3" fill="#caa45a"/>
+  <!-- Schaft / Kolben -->
+  <path d="M14 150 L30 150 L34 280 Q34 296 22 296 Q12 296 12 280 Z" fill="url(#schaft)" stroke="#4a2c12" stroke-width="2"/>
+  <!-- Schloss + Hahn -->
+  <rect x="10" y="170" width="10" height="22" rx="2" fill="#3a3b40" stroke="#1c1d22" stroke-width="1"/>
+  <path d="M10 176 q-8 -2 -10 6" stroke="#3a3b40" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Abzug -->
+  <path d="M24 196 q-2 8 -6 8" stroke="#2a2b30" stroke-width="3" fill="none"/>
+  <!-- Holzmaserung -->
+  <path d="M20 200 Q24 240 26 280" stroke="#5a361a" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>

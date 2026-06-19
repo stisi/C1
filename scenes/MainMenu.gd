@@ -71,14 +71,14 @@ func _berge() -> void:
 func _figuren() -> void:
 	var schuetzin := Figur.new()
 	schuetzin.typ = Figur.Typ.SCHUETZIN
-	schuetzin.position = Vector2(180, 1080)
-	schuetzin.scale = Vector2(1.6, 1.6)
+	schuetzin.position = Vector2(180, 1030)
+	schuetzin.scale = Vector2(1.4, 1.4)
 	schuetzin.jubelt = true
 	add_child(schuetzin)
 	var marketender := Figur.new()
 	marketender.typ = Figur.Typ.MARKETENDER
-	marketender.position = Vector2(540, 1080)
-	marketender.scale = Vector2(1.6, 1.6)
+	marketender.position = Vector2(545, 1030)
+	marketender.scale = Vector2(1.4, 1.4)
 	add_child(marketender)
 	var bubble := SpeechBubble.new()
 	bubble.position = Vector2(150, 870)

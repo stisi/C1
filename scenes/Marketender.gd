@@ -30,37 +30,51 @@ var _wobble_t := 0.0
 
 
 func _ready() -> void:
+	# Statische Hintergrundfarbe, damit das Wackeln im Rausch keine Lücken zeigt.
+	var fond := ColorRect.new()
+	fond.color = Color(0.91, 0.77, 0.53)
+	fond.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(fond)
+
 	_welt = Node2D.new()
 	add_child(_welt)
 
-	var bg := ColorRect.new()
-	bg.color = Color(0.85, 0.7, 0.45)
-	bg.position = Vector2(-100, -100)
-	bg.size = Vector2(920, 1480)
-	_welt.add_child(bg)
-	_zeltdeko()
+	# Gezeichnetes Bierzelt als Bühne
+	var zelt := Sprite2D.new()
+	zelt.texture = load("res://art/bierzelt.svg")
+	zelt.position = Vector2(360, 640)
+	_welt.add_child(zelt)
+
+	var banner := Label.new()
+	banner.text = "BIERZELT"
+	banner.add_theme_font_size_override("font_size", 44)
+	banner.add_theme_color_override("font_color", Color(0.95, 0.89, 0.69))
+	banner.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	banner.position = Vector2(190, 178)
+	banner.size = Vector2(340, 60)
+	_welt.add_child(banner)
 
 	# Durstige Schützin wartet am Tisch
 	var schuetzin := Figur.new()
 	schuetzin.typ = Figur.Typ.SCHUETZIN
-	schuetzin.position = Vector2(140, 700)
-	schuetzin.scale = Vector2(1.4, 1.4)
+	schuetzin.position = Vector2(150, 820)
+	schuetzin.scale = Vector2(1.35, 1.35)
 	_welt.add_child(schuetzin)
 
 	# Der Marketender selbst (Promille-Feder als Anzeige)
 	_feder_anzeige = Figur.new()
 	_feder_anzeige.typ = Figur.Typ.MARKETENDER
-	_feder_anzeige.position = Vector2(580, 700)
-	_feder_anzeige.scale = Vector2(1.4, 1.4)
+	_feder_anzeige.position = Vector2(575, 820)
+	_feder_anzeige.scale = Vector2(1.35, 1.35)
 	_welt.add_child(_feder_anzeige)
 
 	_glas = Node2D.new()
-	_glas.position = Vector2(360, 880)
+	_glas.position = Vector2(360, 900)
 	_glas.draw.connect(_draw_glas)
 	_welt.add_child(_glas)
 
 	_flasche = Node2D.new()
-	_flasche.position = Vector2(360, 700)
+	_flasche.position = Vector2(360, 720)
 	_flasche.draw.connect(_draw_flasche)
 	_welt.add_child(_flasche)
 
@@ -93,21 +107,6 @@ func _ready() -> void:
 	_bubble.position = Vector2(110, 380)
 	add_child(_bubble)
 	_bubble.say(Dialekt.pick(Dialekt.DURSTIGE_SCHUETZINNEN), 2.5)
-
-
-func _zeltdeko() -> void:
-	# Weiß-blaue Zeltbahnen
-	for i in 8:
-		var bahn := ColorRect.new()
-		bahn.color = Color(0.95, 0.95, 0.95) if i % 2 == 0 else Color(0.55, 0.65, 0.85)
-		bahn.position = Vector2(-100 + i * 115, -100)
-		bahn.size = Vector2(115, 320)
-		_welt.add_child(bahn)
-	var tisch := ColorRect.new()
-	tisch.color = Color(0.55, 0.38, 0.2)
-	tisch.position = Vector2(-100, 920)
-	tisch.size = Vector2(920, 660)
-	_welt.add_child(tisch)
 
 
 func _update_hud() -> void:

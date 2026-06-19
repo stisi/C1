@@ -45,11 +45,12 @@ func _build_ui() -> void:
 	GameState.score_changed.connect(func(_s): _update_score())
 
 	# Die Reihe der Schützinnen
+	# Schützenreihe – stehen Schulter an Schulter (leichte Überlappung gewollt).
 	for i in 5:
 		var f := Figur.new()
 		f.typ = Figur.Typ.SCHUETZIN
-		f.position = Vector2(110 + i * 125, 900)
-		f.scale = Vector2(1.3, 1.3)
+		f.position = Vector2(80 + i * 140, 940)
+		f.scale = Vector2(0.95, 0.95)
 		add_child(f)
 		_schuetzinnen.append(f)
 
@@ -65,7 +66,6 @@ func _build_ui() -> void:
 	_info.add_theme_font_size_override("font_size", 44)
 	_info.add_theme_color_override("font_color", Color(0.15, 0.1, 0.05))
 	_info.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_info.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	_info.position = Vector2(0, 320)
 	_info.size = Vector2(720, 60)
 	add_child(_info)

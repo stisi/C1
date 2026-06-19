@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 380" width="220" height="380">
+  <!-- Schützin: Frau in Tiroler Schützentracht (Hut o. Feder = eigenes Sprite) -->
+  <defs>
+    <linearGradient id="loden" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6c7d5e"/>
+      <stop offset="1" stop-color="#4f5e44"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3127"/>
+      <stop offset="1" stop-color="#241d15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Schatten am Boden -->
+  <ellipse cx="110" cy="368" rx="70" ry="12" fill="#000" opacity="0.18"/>
+
+  <!-- Rock -->
+  <path d="M70 232 L150 232 L182 360 L38 360 Z" fill="url(#rock)" stroke="#1a140d" stroke-width="3"/>
+  <path d="M110 232 L110 360" stroke="#1a140d" stroke-width="2" opacity="0.5"/>
+  <!-- Schürzen-/Trachtenborte -->
+  <path d="M44 344 L176 344 L180 360 L40 360 Z" fill="#7a2f33"/>
+
+  <!-- Beine/Schuhe -->
+  <rect x="78" y="354" width="22" height="20" rx="4" fill="#2a1d12"/>
+  <rect x="120" y="354" width="22" height="20" rx="4" fill="#2a1d12"/>
+
+  <!-- Lodenjanker -->
+  <path d="M66 150 Q110 138 154 150 L150 240 L70 240 Z" fill="url(#loden)" stroke="#3a4632" stroke-width="3"/>
+  <!-- Revers -->
+  <path d="M110 150 L92 210 L110 196 L128 210 Z" fill="#3f4b36"/>
+  <!-- Knopfreihe -->
+  <circle cx="110" cy="172" r="3.5" fill="#cdb24a"/>
+  <circle cx="110" cy="188" r="3.5" fill="#cdb24a"/>
+  <circle cx="110" cy="204" r="3.5" fill="#cdb24a"/>
+
+  <!-- Bandelier (Schärpe quer über die Brust) -->
+  <path d="M70 150 L150 232 L138 244 L58 162 Z" fill="#e6d18a" stroke="#b89a3f" stroke-width="2"/>
+  <path d="M70 150 L150 232" stroke="#b89a3f" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Arme -->
+  <path d="M70 156 Q44 188 52 226" fill="none" stroke="url(#loden)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M150 156 Q176 188 168 226" fill="none" stroke="url(#loden)" stroke-width="20" stroke-linecap="round"/>
+  <!-- Hände -->
+  <circle cx="52" cy="228" r="9" fill="#f3c9a0"/>
+  <circle cx="168" cy="228" r="9" fill="#f3c9a0"/>
+
+  <!-- Hals -->
+  <rect x="100" y="120" width="20" height="22" fill="#e9bd92"/>
+
+  <!-- Zöpfe hinter dem Kopf -->
+  <path d="M78 96 Q66 140 76 176" fill="none" stroke="#6b4423" stroke-width="12" stroke-linecap="round"/>
+  <path d="M142 96 Q154 140 144 176" fill="none" stroke="#6b4423" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="76" cy="178" r="6" fill="#8a5a2e"/>
+  <circle cx="144" cy="178" r="6" fill="#8a5a2e"/>
+
+  <!-- Kopf -->
+  <circle cx="110" cy="98" r="34" fill="#f3c9a0"/>
+  <!-- Wangenröte -->
+  <circle cx="90" cy="106" r="7" fill="#f0a98a" opacity="0.6"/>
+  <circle cx="130" cy="106" r="7" fill="#f0a98a" opacity="0.6"/>
+  <!-- Augen -->
+  <circle cx="98" cy="94" r="4.5" fill="#2b2b2b"/>
+  <circle cx="122" cy="94" r="4.5" fill="#2b2b2b"/>
+  <circle cx="99.5" cy="92.5" r="1.5" fill="#fff"/>
+  <circle cx="123.5" cy="92.5" r="1.5" fill="#fff"/>
+  <!-- fröhliches Grinsen -->
+  <path d="M96 110 Q110 122 124 110" fill="none" stroke="#7a3b2b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tiroler Hut (Krempe + Kegel), Spielhahnfeder kommt als eigenes Sprite -->
+  <ellipse cx="110" cy="68" rx="46" ry="12" fill="#243a24"/>
+  <path d="M82 68 Q110 16 138 68 Z" fill="#2f4a2f" stroke="#1c2c1c" stroke-width="2"/>
+  <!-- Hutband + Kordel -->
+  <path d="M84 60 Q110 70 136 60 L138 68 Q110 78 82 68 Z" fill="#1c2c1c"/>
+  <path d="M86 62 Q110 70 134 62" fill="none" stroke="#cdb24a" stroke-width="2"/>
+</svg>

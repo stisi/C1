@@ -22,10 +22,14 @@ var _balken_schwapp: ColorRect
 
 
 func _ready() -> void:
-	var bg := ColorRect.new()
-	bg.color = Color(0.85, 0.7, 0.45)   # Bierzelt-Holz
-	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
-	add_child(bg)
+	var fond := ColorRect.new()
+	fond.color = Color(0.91, 0.77, 0.53)
+	fond.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(fond)
+	var zelt := Sprite2D.new()
+	zelt.texture = load("res://art/bierzelt.svg")
+	zelt.position = Vector2(360, 640)
+	add_child(zelt)
 
 	_info = Label.new()
 	_info.text = "EXEN! Kipp's Handy – aber net zu gach!"
